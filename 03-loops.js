@@ -1,50 +1,76 @@
 // 03-loops.js
 
-// For
-// for (let i = 0; i < 5; i++) {
-//     console.log(`Hello! ${i}`)
-// }
+// NOTE: Explore different loop syntaxes to solve the exercises
 
-// const numbers = [1, 2, 3, 4, 5]
-// for (let i = 0; i < numbers.length; i++) {
-//     console.log(`Element ${numbers[i]}`)
-// }
+// 1. Create a loop that prints the numbers from 1 to 20
 
-// // While
-// let i = 0
-// while (i < 5) {
-//     console.log(`Hola ${i}`)
-//     i++
-// }
+for (let i = 1; i <= 20; i++) {
+    //console.log(i)
+}
 
-// Do while
-i = 6
-do {
-    console.log(`Hola ${i}`)
+// 2. Create a loop that sums all numbers from 1 to 100 and displays the result
+let i = 1
+while (i <= 100) {
+    //console.log(i)
     i++
-} while (i < 5)
-
-// For of
-myArray = [1, 2, 3, 4]
-mySet = new Set(["Cat", "Dog", "Fox", "Garfield"])
-myMap = new Map([
-    ["Name", "Cat"],
-    ["Age", 21],
-])
-
-for (let value of myArray) {
-    console.log(value)
 }
 
-for (let value of mySet) {
-    console.log(value)
+// 3. Create a loop that prints all even numbers between 1 and 50
+// Even: 0,2,4... Odd: 1,3,5...
+//console.log("Even numbers")
+for (let i = 1; i <= 50; i++) {
+    if (i % 2 == 0) {
+        //console.log(i)
+    }
 }
 
-for (let value of myMap) {
-    console.log(value)
+// 4. Given an array of names, use a loop to print each name to the console
+let arrayNames = ["Laura", "Ludmila", "Carlos", "Juan"]
+for (value of arrayNames) {
+    //console.log(value)
 }
 
-myString = "Hello Javascript!"
-for (let value of myString) {
-    console.log(value)
+// 5. Write a loop that counts the number of vowels in a string
+let amountVowels = 0
+let myString = "murcielago"
+for (value of myString) {
+    if (
+        value == "a" ||
+        value == "e" ||
+        value == "i" ||
+        value == "o" ||
+        value == "u"
+    ) {
+        amountVowels++
+    }
 }
+console.log(`Amount of vowels ${amountVowels}`)
+
+// 6. Given an array of numbers, use a loop to multiply all numbers and show the product
+let numbers = [1, 2, 3, 4, 5, 6]
+let multiplyNumbers = 1
+for (let i = 0; i < numbers.length; i++) {
+    multiplyNumbers *= numbers[i]
+}
+//console.log(multiplyNumbers)
+
+// 7. Write a loop that prints the multiplication table of 5
+i = 1
+while (i <= 10) {
+    result = 5 * i
+    //console.log(`5 x ${i} = ${result}`)
+    i++
+}
+
+// 8. Use a loop to reverse a string REVIEW!
+myString = "My World"
+let newString = ""
+for (let i = myString.length; i > 1; i--) {
+    newString += myString[i]
+}
+
+console.log(newString)
+
+// 9. Use a loop to generate the first 10 numbers of the Fibonacci sequence
+
+// 10. Given an array of numbers, use a loop to create a new array that contains only the numbers greater than 10
