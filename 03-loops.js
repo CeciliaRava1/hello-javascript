@@ -44,15 +44,15 @@ for (value of myString) {
         amountVowels++
     }
 }
-console.log(`Amount of vowels ${amountVowels}`)
+// console.log(`Amount of vowels ${amountVowels}`)
 
 // 6. Given an array of numbers, use a loop to multiply all numbers and show the product
-let numbers = [1, 2, 3, 4, 5, 6]
-let multiplyNumbers = 1
-for (let i = 0; i < numbers.length; i++) {
-    multiplyNumbers *= numbers[i]
-}
-//console.log(multiplyNumbers)
+// let numbers = [1, 2, 3, 4, 5, 6]
+// let multiplyNumbers = 1
+// for (let i = 0; i < numbers.length; i++) {
+//     multiplyNumbers *= numbers[i]
+// }
+// //console.log(multiplyNumbers)
 
 // 7. Write a loop that prints the multiplication table of 5
 i = 1
@@ -69,8 +69,30 @@ for (let i = myString.length; i > 1; i--) {
     newString += myString[i]
 }
 
-console.log(newString)
+// console.log(newString)
 
 // 9. Use a loop to generate the first 10 numbers of the Fibonacci sequence
+let a = 0
+let b = 1
+let c = 0
+console.log(a)
+console.log(b)
+
+for (let i = 0; i <= 7; i++) {
+    c = a + b
+    console.log(c)
+    a = b
+    b = c
+}
 
 // 10. Given an array of numbers, use a loop to create a new array that contains only the numbers greater than 10
+let numbers = [1, 22, 3, 34, 15, 6, 50]
+let greaterThan10 = []
+count = 0
+
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > 10) {
+        greaterThan10.push(numbers[i])
+    }
+}
+console.log(greaterThan10)
