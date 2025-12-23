@@ -12,7 +12,7 @@ class Person {
 }
 
 let myPerson = new Person("Lucia", 23)
-console.log(myPerson)
+// console.log(myPerson)
 
 
 // 2. Add a method to the class that uses the properties
@@ -32,7 +32,7 @@ class Person1 {
 
 // 3. Show the property values and invoke the function
 let myPerson1 = new Person1("Lucia", 23)
-console.log(myPerson1.presentation())
+// console.log(myPerson1.presentation())
 
 
 // 4. Add a static method to the first class
@@ -43,15 +43,15 @@ class Person2 {
         this.age = age
     }
 
-    static greetings() {
-        return "Hello!"
+    greetings() {
+       console.log("Hello!")
     }
 
 }
 
 
 // 5. Use the static method
-console.log(Person2.greetings())
+// console.log(Person2.greetings())
 
 
 // 6. Create a class that uses inheritance
@@ -65,7 +65,7 @@ class Student extends Person {
 }
 
 let myStudent = new Student("Paolo", 13, "School One")
-console.log(myStudent)
+// console.log(myStudent)
 
 
 // 7. Create a class that uses getters and setters
@@ -89,11 +89,44 @@ class Student1 extends Person {
 
 let myStudent1 = new Student1("Paolo", 13, "School One")
 myStudent1.name = "new name"
-console.log(myStudent1)
+// console.log(myStudent1)
 
 
 // 8. Modify the class with getters and setters to use private properties
+class Student2 extends Person2 {
+    _name;
+    _age;
+
+    constructor(name, age, schoolName) {
+        super(name, age);
+        this.schoolName = schoolName;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    set name(newName) {
+        this._name = newName;
+    }
+
+    get age() {
+        return this._age;
+    }
+
+    set age(newAge) {
+        this._age = newAge;
+    }
+
+    // 10. Override a method of a class that uses inheritance
+    greetings() {
+        console.log("Bye bye!");
+    }
+}
+
 
 // 9. Use the get and set and show their values
-
-// 10. Override a method of a class that uses inheritance
+let myStudent2 = new Student2("Luisina", 11, "School One")
+myStudent2.name = "Luisi"
+console.log(myStudent2.name)
+myStudent2.greetings()
