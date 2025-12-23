@@ -130,3 +130,5 @@ let myStudent2 = new Student2("Luisina", 11, "School One")
 myStudent2.name = "Luisi"
 console.log(myStudent2.name)
 myStudent2.greetings()
+
+
