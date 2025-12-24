@@ -1,5 +1,8 @@
 // 04-functions.js
 
+
+
+
 // 1. Create a function that receives two numbers and returns their sum
 function sum(a, b) {
     result = a + b
